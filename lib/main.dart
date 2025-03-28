@@ -1,5 +1,5 @@
-import 'package:easy_recipes/Pages/HomePage.dart';
-// import 'package:easy_recipes/Screens/splash_screen.dart';
+// import 'package:easy_recipes/Pages/HomePage.dart';
+import 'package:easy_recipes/Screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 late MediaQueryData mediaQuery;
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: HomePage(),
+      home: SplashScreen(),
     );
   }
 }
