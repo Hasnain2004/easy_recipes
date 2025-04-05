@@ -1,4 +1,4 @@
-import 'package:easy_recipes/Pages/IntroPages/settings.dart';
+import 'package:easy_recipes/Pages/settings.dart';
 import 'package:easy_recipes/Screens/drawer_screen.dart';
 import 'package:easy_recipes/Screens/main_screen.dart';
 import 'package:flutter/material.dart';
