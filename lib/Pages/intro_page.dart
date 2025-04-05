@@ -32,31 +32,38 @@ class _IntroPageState extends State<IntroPage> {
           children: const [IntroPage1(), IntroPage2(), IntroPage3()],
         ),
         Container(
-            alignment: const Alignment(0, 0.75),
+          alignment: const Alignment(0, 0.60),
+          child: SmoothPageIndicator(
+            controller: _controller,
+            count: 3,
+            effect: const SlideEffect(
+                spacing: 8.0,
+                radius: 4.0,
+                dotWidth: 20,
+                dotHeight: 10,
+                paintStyle: PaintingStyle.stroke,
+                strokeWidth: 1.5,
+                dotColor: Colors.grey,
+                activeDotColor: Color(0xFF6B4B3E)),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(25),
+          child: Container(
+            alignment: const Alignment(0, 0.82),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 GestureDetector(
                   child: const Text(
                     'Skip',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      fontSize: 16,
+                    ),
                   ),
                   onTap: () {
                     _controller.jumpToPage(2);
                   },
-                ),
-                SmoothPageIndicator(
-                  controller: _controller,
-                  count: 3,
-                  effect: const SlideEffect(
-                      spacing: 8.0,
-                      radius: 4.0,
-                      dotWidth: 20,
-                      dotHeight: 10,
-                      paintStyle: PaintingStyle.stroke,
-                      strokeWidth: 1.5,
-                      dotColor: Colors.grey,
-                      activeDotColor: Color(0xFF6B4B3E)),
                 ),
                 isLastPage
                     ? GestureDetector(
@@ -70,10 +77,8 @@ class _IntroPageState extends State<IntroPage> {
                           child: const Center(
                             child: Text(
                               'Start',
-                              style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white),
                             ),
                           ),
                         ),
@@ -95,10 +100,8 @@ class _IntroPageState extends State<IntroPage> {
                           child: const Center(
                             child: Text(
                               'Next',
-                              style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white),
                             ),
                           ),
                         ),
@@ -109,7 +112,9 @@ class _IntroPageState extends State<IntroPage> {
                         },
                       )
               ],
-            ))
+            ),
+          ),
+        )
       ],
     ));
   }

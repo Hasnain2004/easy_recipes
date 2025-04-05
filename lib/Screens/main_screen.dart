@@ -14,13 +14,14 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       backgroundColor: const Color(0xFFFEFADF),
       appBar: AppBar(
-        title: const Text(
-          'Main Screen',
-          style: TextStyle(color: Color(0xFF6B4B3E)),
+        title: Container(
+          alignment: const Alignment(1, 0),
+          child: const CircleAvatar(
+            backgroundImage: AssetImage('assets/images/my.jpg'),
+          ),
         ),
-        centerTitle: true,
         backgroundColor: const Color(0xFFFEFADF),
-        leading: DrawerWidget(),
+        leading: const DrawerWidget(),
       ),
     );
   }

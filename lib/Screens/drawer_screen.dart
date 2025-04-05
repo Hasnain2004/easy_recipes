@@ -18,10 +18,9 @@ class _DrawerScreenState extends State<DrawerScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           drawerList(Icons.home, "Home", 0),
-          drawerList(Icons.mail, 'Mail', 1),
-          drawerList(Icons.favorite_border, 'Favorites', 2),
+          drawerList(Icons.shopping_cart, 'Cart', 1),
+          drawerList(Icons.favorite, 'Favorites', 2),
           drawerList(Icons.settings, 'Settings', 3),
-          drawerList(Icons.info, 'About', 4),
         ],
       ),
     );

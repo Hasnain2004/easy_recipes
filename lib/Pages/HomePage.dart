@@ -1,3 +1,4 @@
+import 'package:easy_recipes/Pages/IntroPages/settings.dart';
 import 'package:easy_recipes/Screens/drawer_screen.dart';
 import 'package:easy_recipes/Screens/main_screen.dart';
 import 'package:flutter/material.dart';
@@ -48,13 +49,7 @@ class _HomePageState extends State<HomePage> {
           color: Colors.blue,
         );
       case 3:
-        return Container(
-          color: Colors.redAccent,
-        );
-      case 4:
-        return Container(
-          color: Colors.limeAccent,
-        );
+        return const Settings();
       default:
         return const HomePage();
     }
